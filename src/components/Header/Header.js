@@ -18,10 +18,10 @@ const Header = () => {
                             <Link to="/home">Home</Link>
                         </li>
                         <li>
-                            <Link to="/events">Events</Link>
+                            <Link to="/orders">Orders</Link>
                         </li>
                         <li>
-                            <Link to="/login">Contact</Link>
+                            <Link to="/admin">Admin</Link>
                         </li>
                         <li>
                             <Link className="btn-book" to="/login">{(loggedInUser?.name || loggedInUser?.displayName) ? (loggedInUser.name || loggedInUser.displayName) : 'Login'}</Link>

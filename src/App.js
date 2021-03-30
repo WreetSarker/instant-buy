@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
+import AddProduct from "./components/AddProduct/AddProduct";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/addProduct">
+            <AddProduct></AddProduct>
           </Route>
         </Switch>
       </Router>
