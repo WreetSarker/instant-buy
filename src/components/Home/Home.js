@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
-import './Home.css'
+import './Home.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import * as ReactBootStrap from 'react-bootstrap'
 
 const Home = () => {
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetch('https://shrouded-dusk-39597.herokuapp.com/products')
             .then(resp => resp.json())
             .then(data => setProducts(data))
+        setLoading(true)
     }, [])
 
     return (
         <div className="product-container">
+
             {
-                products.map(pd => <Product pd={pd}></Product>)
+                loading ? products.map(pd => <Product pd={pd}></Product>) : <ReactBootStrap.Spinner animation="border" />
             }
+
+
+
         </div>
     );
 };
