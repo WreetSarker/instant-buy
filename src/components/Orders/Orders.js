@@ -1,4 +1,5 @@
 import React from 'react';
+import './Orders.css'
 
 const Orders = (props) => {
     const { name, date, email, imageURL, productName } = props.pd;
@@ -8,8 +9,8 @@ const Orders = (props) => {
                 <img src={imageURL} alt="" />
             </div>
             <div className="info">
-                <h3>{productName}</h3>
-                <h4>{date}</h4>
+                <h3>Product Name: {productName}</h3>
+                <h4>Order Placed on: {date}</h4>
 
             </div>
         </div>

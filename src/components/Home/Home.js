@@ -12,7 +12,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="product-container">
             {
                 products.map(pd => <Product pd={pd}></Product>)
             }

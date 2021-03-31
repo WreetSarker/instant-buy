@@ -1,0 +1,19 @@
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-holder img{
+    width: 30%;
+}
+
+.card-holder button{
+    width: 30%;
+}
+.event-btn{
+    margin-top: 0px;
+    margin-bottom: 25px;
+    height:25px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, tomato, lightsalmon);
+}
