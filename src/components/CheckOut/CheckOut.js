@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 
 const CheckOut = () => {
@@ -32,20 +33,13 @@ const CheckOut = () => {
     }, [])
 
 
-    // useEffect(() => {
-
-
-
-    // }, [id])
-
-
-
     return (
         <div>
             <h1>Checkout</h1>
             <h3>Ordered Item: {item.name}</h3>
             <h4>Price: {item.price}</h4>
             <p>Weight: {item.weight}</p>
+            <Link to="/orders"><button>CheckOut</button></Link>
 
         </div>
     );
