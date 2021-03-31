@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as ReactBootStrap from 'react-bootstrap'
+import { Spinner } from 'react-bootstrap'
 
 const Home = () => {
     const [products, setProducts] = useState([]);
@@ -17,13 +17,9 @@ const Home = () => {
 
     return (
         <div className="product-container">
-
             {
-                loading ? products.map(pd => <Product pd={pd}></Product>) : <ReactBootStrap.Spinner animation="border" />
+                loading ? products.map(pd => <Product pd={pd}></Product>) : (<Spinner animation="grow" />)
             }
-
-
-
         </div>
     );
 };

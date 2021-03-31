@@ -1,0 +1,16 @@
+.login-info {
+ display: flex;
+}
+.login-info img {
+    width: 40px;
+    margin-left: 20px;
+}
+.login-btn{
+    margin-top: 20px;
+    width: 300px;
+}
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

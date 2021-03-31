@@ -4,6 +4,8 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
+import google from '../../icons/Group 573.png'
+import './Login.css'
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig)
@@ -39,9 +41,12 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h1>Login With</h1>
-            <button onClick={handleGoogleSignIn}>Continue with Google</button>
+        <div className="login-container">
+            <div className="login-info">
+                <h1>Login With</h1>
+                <img src={google} alt="" />
+            </div>
+            <button className="login-btn" onClick={handleGoogleSignIn}>Continue with Google</button>
 
         </div>
     );

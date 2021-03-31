@@ -4,7 +4,7 @@ import './Orders.css'
 const Orders = (props) => {
     const { name, date, email, imageURL, productName } = props.pd;
     return (
-        <div className="events-holder">
+        <div className="orders-holder">
             <div className="img-container">
                 <img src={imageURL} alt="" />
             </div>
