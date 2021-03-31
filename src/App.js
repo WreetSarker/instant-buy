@@ -7,9 +7,14 @@ import {
 } from "react-router-dom";
 import './App.css';
 import AddProduct from "./components/AddProduct/AddProduct";
+import Admin from "./components/Admin/Admin";
+import BoughtProducts from "./components/BoughtProducts/BoughtProducts";
+import CheckOut from "./components/CheckOut/CheckOut";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
+import ManageProduct from "./components/ManageProduct/ManageProduct";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 
 export const UserContext = createContext();
@@ -33,6 +38,18 @@ function App() {
           <Route path="/addProduct">
             <AddProduct></AddProduct>
           </Route>
+          <Route path="/editProduct">
+            <ManageProduct></ManageProduct>
+          </Route>
+          <PrivateRoute path="/checkout">
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+          <PrivateRoute path="/orders">
+            <BoughtProducts></BoughtProducts>
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <Admin></Admin>
+          </PrivateRoute>
         </Switch>
       </Router>
 

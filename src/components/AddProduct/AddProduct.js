@@ -16,7 +16,7 @@ const AddProduct = () => {
         }
 
 
-        fetch('http://localhost:4000/addProduct', {
+        fetch('https://shrouded-dusk-39597.herokuapp.com/addProduct', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
